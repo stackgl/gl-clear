@@ -14,8 +14,7 @@
     "tape": "^2.12.3"
   },
   "dependencies": {
-    "gl-context": "^0.0.0",
-    "tape": "^2.12.3"
+    "gl-context": "^0.0.0"
   },
   "repository": {
     "type": "git",
