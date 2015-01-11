@@ -5,13 +5,18 @@
   "main": "index.js",
   "scripts": {
     "demo": "beefy demo.js --open",
-    "test": "beefy test.js --open"
+    "test": "browserify test.js | tap-closer | smokestack | tap-spec "
   },
   "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughskennedy.com/)",
   "license": "MIT",
   "devDependencies": {
     "beefy": "^1.1.0",
+    "browserify": "^8.1.0",
+    "canvas-pixels": "0.0.0",
     "gl-context": "^0.0.0",
+    "smokestack": "^3.0.0",
+    "tap-closer": "^1.0.0",
+    "tap-spec": "^2.1.2",
     "tape": "^2.12.3"
   },
   "dependencies": {},

@@ -3,13 +3,35 @@ var defaults = require('./defaults')
 module.exports = clear
 
 function clear(opts) {
-  opts = defaults(opts || {})
+  opts = opts || {}
 
-  var stencil = opts.stencil
-  var color = opts.color
-  var depth = opts.depth
+  var color = defaults.color(opts.color)
+  Object.defineProperty(clear, 'color', {
+    get: function() { return color },
+    set: function(value) {
+      return color = defaults.color(value)
+    }
+  })
 
-  return function clear(gl) {
+  var depth = defaults.depth(opts.depth)
+  Object.defineProperty(clear, 'depth', {
+    get: function() { return depth },
+    set: function(value) {
+      return depth = defaults.depth(value)
+    }
+  })
+
+  var stencil = defaults.stencil(opts.stencil)
+  Object.defineProperty(clear, 'stencil', {
+    get: function() { return stencil },
+    set: function(value) {
+      return stencil = defaults.stencil(value)
+    }
+  })
+
+  return clear
+
+  function clear(gl) {
     var flags = 0
 
     if (color !== false) {
