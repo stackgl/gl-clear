@@ -1,6 +1,6 @@
 {
   "name": "gl-clear",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A helper WebGL module for clearing the current buffer – extracted from [@mikolalysenko](http://github.com/mikolalysenko)'s [gl-now](http://github.com/mikolalysenko/gl-now).",
   "main": "index.js",
   "scripts": {
