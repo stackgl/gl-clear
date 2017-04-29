@@ -7,24 +7,24 @@ function clear(opts) {
 
   var color = defaults.color(opts.color)
   Object.defineProperty(clear, 'color', {
-    get: function() { return color },
-    set: function(value) {
+    get() { return color },
+    set(value) {
       return color = defaults.color(value)
     }
   })
 
   var depth = defaults.depth(opts.depth)
   Object.defineProperty(clear, 'depth', {
-    get: function() { return depth },
-    set: function(value) {
+    get() { return depth },
+    set(value) {
       return depth = defaults.depth(value)
     }
   })
 
   var stencil = defaults.stencil(opts.stencil)
   Object.defineProperty(clear, 'stencil', {
-    get: function() { return stencil },
-    set: function(value) {
+    get() { return stencil },
+    set(value) {
       return stencil = defaults.stencil(value)
     }
   })

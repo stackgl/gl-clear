@@ -3,7 +3,7 @@ var context = require('gl-context')
 var clear   = require('./')
 var test    = require('tape')
 
-test('defaults: color', function(t) {
+test('defaults: color', t => {
   t.deepEqual(clear({}).color, [0, 0, 0, 1], 'nothing passed')
   t.deepEqual(clear({ color: false }).color, false, 'false passed')
   t.deepEqual(clear({ color: true }).color, [0, 0, 0, 1], 'true passed')
@@ -12,7 +12,7 @@ test('defaults: color', function(t) {
   t.end()
 })
 
-test('defaults: depth', function(t) {
+test('defaults: depth', t => {
   t.deepEqual(clear({}).depth, 1, 'nothing passed')
   t.deepEqual(clear({ depth: false }).depth, false, 'false passed')
   t.deepEqual(clear({ depth: true }).depth, 1, 'true passed')
@@ -21,7 +21,7 @@ test('defaults: depth', function(t) {
   t.end()
 })
 
-test('defaults: stencil', function(t) {
+test('defaults: stencil', t => {
   t.deepEqual(clear({}).stencil, false, 'nothing passed')
   t.deepEqual(clear({ stencil: false }).stencil, false, 'false passed')
   t.deepEqual(clear({ stencil: true }).stencil, 1, 'true passed')
@@ -30,7 +30,7 @@ test('defaults: stencil', function(t) {
   t.end()
 })
 
-test('clear: color', function(t) {
+test('clear: color', t => {
   var canvas = document.createElement('canvas')
   var gl = context(canvas)
 

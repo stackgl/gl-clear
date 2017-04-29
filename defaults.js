@@ -1,14 +1,8 @@
-exports.color = function(color) {
-  return array(color, [0, 0, 0, 1])
-}
+exports.color = color => array(color, [0, 0, 0, 1])
 
-exports.depth = function(depth) {
-  return number(depth, 1)
-}
+exports.depth = depth => number(depth, 1)
 
-exports.stencil = function(stencil) {
-  return number(stencil, false)
-}
+exports.stencil = stencil => number(stencil, false)
 
 function number(n, def) {
   if (n === false) return false
